@@ -4,10 +4,79 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Vite App</title>
   </head>
   <body>
+    <header class="header-bar">
+      <!-- THIS IS MY NAVBAR -->
+      <nav class="nav-bar">
+        <ul>
+          <li><h1 id="logo-style">I'm Board</h1></li>
+          <li><a href="#games" class="nav-links">Games</a></li>
+          <li><a href="#game-summary" class="nav-links">Game Summary</li>
+          <li><a href="#leave-review" class="nav-links">Leave Review</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="games">
+        <h1>Games</h1>
+        <h2>A selection of top board games</h2>
+        <div id="game-gallery-container"></div>
+        <div>
+      </section>
+      <section id="game-summary">
+        <h2>Game information</h2>
+        <div id="game-info-container"></div>
+        <div>
+      </section>
+      <section id="leave-review">
+<h2>Leave a review</h2>
+<div id="review-info-container"></div>
+</section>
+      <section>
+        <form id="game-form">
+          <label for="gameName">Game name: </label>
+          <select type="select" name="gameName" id="gameName" >
+            <option value="pictionary">Pictionary</option>
+            <option value="uno">Uno</option>
+            <option value="monopoly">Monopoly</option>
+            <option value="scrabble">Scrabble</option>
+            <option value="guesswho">Guess Who</option>
+            <option value="chess">Chess</option>
+            <option value="hungry-hungry-hippos">Hungry Hungry Hippos</option>
+            <option value="jenga">Jenga</option>
+            <option value="cluedo">Cludeo</option>
+            <option value="risk">Risk</option>
+          </select>
+          <label for="userName">Name: </label>
+          <input type="text" name="userName" id="userName" />
+          <label for="comment">Comment: </label>
+          <textarea name="comment" id="comment" rows="5"></textarea>
+          <fieldset class="rating">
+            <input
+              type="radio"
+              id="five-star"
+              name="rating"
+              value="★★★★★"
+              checked
+            />
+            <label for="five-star">★★★★★</label>
+            <input type="radio" id="four-star" name="rating" value="★★★★" />
+            <label for="four-star">★★★★</label>
+            <input type="radio" id="three-star" name="rating" value="★★★" />
+            <label for="three-star">★★★</label>
+            <input type="radio" id="two-star" name="rating" value="★★" />
+            <label for="two-star">★★</label>
+            <input type="radio" id="one-star" name="rating" value="★" />
+            <label for="one-star">★</label>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer></footer>
     <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
