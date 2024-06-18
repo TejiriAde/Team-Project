@@ -1,3 +1,6 @@
+ renderlinks
+//https://team-project-1-xc83.onrender.com/
+
 
 let currentGame;
 
@@ -117,10 +120,13 @@ games.forEach((thisGame, index) => {
   });
 });
 
+
 const form = document.getElementById("game-form");
 
 async function fetchAndRenderGameForm() {
-  const response = await fetch("http://localhost:7430/reviews");
+  const response = await fetch(
+    "https://team-project-1-xc83.onrender.com//reviews"
+  );
   const userReviews = await response.json();
   console.log(userReviews);
   const reviewDiv = document.getElementById("review-info-container");
@@ -147,13 +153,16 @@ async function submitButton(event) {
   const formValues = Object.fromEntries(formData);
 
   try {
-    const response = await fetch("http://localhost:7430/reviews", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+    const response = await fetch(
+      "https://team-project-1-xc83.onrender.com//reviews",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      }
+    );
 
     const data = await response.json();
 
