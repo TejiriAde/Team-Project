@@ -1,6 +1,4 @@
- renderlinks
 //https://team-project-1-xc83.onrender.com/
-
 
 let currentGame;
 
@@ -120,12 +118,11 @@ games.forEach((thisGame, index) => {
   });
 });
 
-
 const form = document.getElementById("game-form");
 
 async function fetchAndRenderGameForm() {
   const response = await fetch(
-    "https://team-project-1-xc83.onrender.com//reviews"
+    "https://team-project-1-xc83.onrender.com/reviews"
   );
   const userReviews = await response.json();
   console.log(userReviews);
@@ -154,7 +151,7 @@ async function submitButton(event) {
 
   try {
     const response = await fetch(
-      "https://team-project-1-xc83.onrender.com//reviews",
+      "https://team-project-1-xc83.onrender.com/reviews",
       {
         method: "POST",
         headers: {
@@ -178,4 +175,3 @@ async function submitButton(event) {
     console.error("Error:", error);
   }
 }
-
