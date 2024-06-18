@@ -32,11 +32,11 @@ app.get("/reviews", async (req, res) => {
 });
 
 app.post("/reviews", async (request, response) => {
-  const { game_name, rating, username, reviews } = request.body;
+  const { game_name, rating, username, review } = request.body;
   try {
     await db.query(
-      `INSERT INTO reviews (game_name, rating, username, reviews) VALUES ($1, $2, $3, $4)`,
-      [game_name, rating, username, reviews]
+      `INSERT INTO reviews (game_name, rating, username, review) VALUES ($1, $2, $3, $4)`,
+      [game_name, rating, username, review]
     );
     response.status(200).json({ success: true });
   } catch (error) {
