@@ -6,22 +6,20 @@
   text-decoration: none;
 }
 
+/* page behaviours  */
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* page styling */
 
 main {
   padding: 2em;
-  padding-top: 100px;
 }
 
 section {
-  display: flex;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
+  padding-bottom: 50px;
 }
 
 /* typography styling  */
@@ -40,11 +38,16 @@ h3 {
   font-weight: 600;
 }
 
+.sub-title {
+  color: rgb(100, 100, 100);
+}
+
 /* game section styling  */
 
 #games {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 
 #game-gallery-container {
@@ -55,12 +58,15 @@ h3 {
 
 .gallery-item {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.gallery-item:hover {
+  cursor: pointer;
 }
 
 .gallery-image {
-  height: 50vh;
+  width: 350px;
 }
 
 /* navbar styling */
@@ -68,7 +74,7 @@ h3 {
 .nav-bar {
   position: fixed;
   width: 100vw;
-  height: 60px;
+  height: 80px;
   background-color: orangered;
 }
 
@@ -78,7 +84,8 @@ li {
 
 .nav-links {
   display: block;
-  padding: 20px;
+  padding: 35px;
+  color: white;
 }
 
 .nav-links:hover {
@@ -89,7 +96,90 @@ li {
   display: block;
   padding: 20px;
   padding-right: 20px;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  font-size: larger;
+  width: 200px;
+}
+
+/* form styling */
+
+#game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  bottom: 0;
+  max-width: 45vw;
+  /* outline: 2px solid #646cff; */
+}
+
+#game-info div {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  /* outline: 2px solid #646cff; */
+}
+
+#game-info div p {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  /* outline: 2px solid #646cff; */
+  text-align: left;
+}
+
+#rating {
+  margin-right: 10px;
+  flex-basis: 20ch;
+}
+
+#comment-box {
+  flex-grow: 1;
+  flex-basis: 150ch;
+}
+
+.rating {
+  border: none;
+}
+
+/* form submission styling  */
+
+#game-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  bottom: 0;
+  max-width: 45vw;
+  /* outline: 2px solid #646cff; */
+}
+
+#submit-button {
+  background-color: orangered;
+  color: white;
+  height: 3em;
+  border: none;
+  border-radius: 1.5em;
+  font-weight: 600;
+}
+
+#submit-button:hover {
+  background-color: rgb(255, 124, 77);
+  color: white;
+  height: 3em;
+  border: solid;
+  border-color: orangered;
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+
+/* media queries  */
+
+@media (width <= 768px) {
+  #game-form {
+    max-width: 100vw;
+  }
+  #game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    bottom: 0;
+    max-width: 100vw;
+  }
 }
