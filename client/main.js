@@ -123,7 +123,7 @@ const form = document.getElementById("game-form");
 
 async function fetchAndRenderGameForm() {
   const response = await fetch(
-    "https://team-project-0ss1.onrender.com/reviews"
+    "https://team-project-0ss1.onrender.com//reviews"
   );
   const userReviews = await response.json();
   console.log(userReviews);
@@ -152,7 +152,7 @@ async function submitButton(event) {
 
   try {
     const response = await fetch(
-      "https://team-project-0ss1.onrender.com/reviews",
+      "https://team-project-0ss1.onrender.com//reviews",
       {
         method: "POST",
         headers: {
