@@ -202,34 +202,6 @@ li {
 
 /* form styling */
 
-#game-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  bottom: 0;
-  max-width: 45vw;
-  /* outline: 2px solid #646cff; */
-}
-
-#game-info div {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-}
-
-#game-info div p {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  text-align: left;
-}
-
-#form-review-section {
-  display: flex;
-  flex-direction: row;
-  gap: 3.5em;
-}
-
 #review-info-container {
   display: flex;
   flex-direction: column;
@@ -239,18 +211,54 @@ li {
   padding-bottom: 10px;
 }
 
-#inputReviews {
-  padding: 12px;
+#review-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  bottom: 0;
+  padding-top: 40px;
+}
+#review-info div {
+  display: flex;
+}
+
+#review-info div p {
+  display: flex;
+  flex-shrink: 1;
+  text-align: left;
+}
+
+#game-name-title {
+  display: flex;
+  flex-basis: 40ch;
+}
+
+#form-review-section {
+  display: flex;
+  flex-direction: row;
 }
 
 #rating {
   margin-right: 10px;
   flex-basis: 20ch;
+  /* font-size: small; */
+  color: orangered;
+  justify-content: flex-end;
+}
+
+.rating-div {
+  position: relative;
+  z-index: -5;
+  bottom: 3.5px;
 }
 
 #comment-box {
+  display: flex;
   flex-grow: 1;
-  flex-basis: 150ch;
+  flex-basis: 5ch;
+}
+#comment-box-container {
+  padding-bottom: 20px;
 }
 
 .rating {
@@ -268,7 +276,6 @@ li {
   display: flex;
   flex-direction: column;
   width: 45vw;
-  height: 400px;
   padding: 2px;
   gap: 1em;
 }
@@ -280,7 +287,7 @@ li {
 #submit-button {
   background-color: orangered;
   color: white;
-  height: 12em;
+  height: 3em;
   border: none;
   border-radius: 1.5em;
   font-weight: 600;
@@ -294,6 +301,28 @@ li {
   border-color: orangered;
   border-radius: 1.5em;
   cursor: pointer;
+}
+
+#game_name {
+  height: 40px;
+  font-size: medium;
+}
+
+#formUsername {
+  height: 40px;
+  font-size: medium;
+}
+
+#game_name:hover {
+  cursor: pointer;
+}
+
+#username {
+  display: flex;
+  flex-basis: 17ch;
+  height: 35px;
+  flex-shrink: 0;
+  font-weight: 650;
 }
 
 /* media queries  */
