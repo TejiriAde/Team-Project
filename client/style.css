@@ -125,11 +125,20 @@ li {
   text-align: left;
 }
 
+#leave-review {
+  display: flex;
+  position: relative;
+}
+
 #review-info-container {
-  height: 300px;
-  width: 500px;
-  border: 1px solid black;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 400px;
+  width: 40%;
   overflow: scroll;
+  top: 40px;
+  padding-bottom: 10px;
 }
 
 #inputReviews {
@@ -152,13 +161,31 @@ li {
 
 /* form submission styling  */
 
+#formBox {
+  display: flex;
+  position: relative;
+  padding: 10px;
+}
+
 #game-form {
   display: flex;
+  position: absolute;
   flex-direction: column;
+  right: 1vw;
+  width: 40%;
+  height: 400px;
+  padding: 2px;
+  font-size: 10px;
   gap: 1em;
-  bottom: 0;
-  max-width: 45vw;
-  /* outline: 2px solid #646cff; */
+  top: -75px;
+}
+
+#game-form label {
+  font-size: 20px;
+}
+
+#game-form h1 {
+  text-align: center;
 }
 
 #submit-button {
