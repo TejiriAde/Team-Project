@@ -22,6 +22,10 @@ section {
   padding-bottom: 50px;
 }
 
+#filler-div {
+  display: none;
+}
+
 /* typography styling  */
 
 h1 {
@@ -271,6 +275,9 @@ li {
 @media (width <= 768px) {
   #game-form {
     width: 90vw;
+  }
+  #filler-div {
+    display: block;
   }
   #game-info {
     display: flex;
