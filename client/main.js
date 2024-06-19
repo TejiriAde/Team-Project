@@ -175,7 +175,7 @@ let gameDataDisplay = document.getElementById("game-info");
 games.forEach((thisGame, index) => {
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
-    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><br><br><p> Description: ${thisGame.summary}`;
+    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><p> Description: ${thisGame.summary}`;
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
 });
