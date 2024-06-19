@@ -1,3 +1,4 @@
+
 //https://team-project-1-xc83.onrender.com/ client
 //https://team-project-0ss1.onrender.com/ server
 
@@ -59,19 +60,11 @@ async function submitButton(event) {
   }
 }
 
+
 let currentGame;
 
 function createGameArray() {
   let gameArray = [];
-  const uno = document.getElementById("uno");
-  uno.name = "Uno";
-  uno.summary =
-    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
-  uno.noOfPlayers = "2+";
-  uno.noOfPlayersAria = "2 or more";
-  uno.playerTime = "5 minutes - forever";
-  uno.playTime = "5 minute and upwards";
-  game.push(uno);
 
   const pictionary = document.getElementById("pictionary");
   pictionary.name = "Pictionary";
@@ -82,6 +75,16 @@ function createGameArray() {
   pictionary.playTime = "30 minutes - 1hr";
   pictionary.playTime = "30 minutes to 1 hour";
   game.push(pictionary);
+
+  const uno = document.getElementById("uno");
+  uno.name = "Uno";
+  uno.summary =
+    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
+  uno.noOfPlayers = "2+";
+  uno.noOfPlayersAria = "2 or more";
+  uno.playerTime = "5 minutes - forever";
+  uno.playTime = "5 minute and upwards";
+  game.push(uno);
 
   const monopoly = document.getElementById("monopoly");
   monopoly.name = "Monopoly";
@@ -176,3 +179,4 @@ games.forEach((thisGame, index) => {
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playerTime}. ${thisGame.summary}.`;
   });
 });
+
