@@ -61,17 +61,15 @@ async function submitButton(event) {
 
 let currentGame;
 
-
 function createGameArray() {
   let game = [];
-
 
   const pictionary = document.getElementById("pictionary");
   pictionary.name = "Pictionary";
   pictionary.summary =
     "A Team based drawing game where your team must guess what is being drawn first to win the points";
   pictionary.noOfPlayers = "4+";
-  pictionary.noOfPlayers.ariaLabel = "4 or more";
+  pictionary.noOfPlayersAria = "4 or more";
   pictionary.playTime = "30 minutes - 1hr";
 
   pictionary.playTimeAria = "30 minutes to 1 hour";
@@ -86,8 +84,6 @@ function createGameArray() {
   uno.playTime = "5 minutes - forever";
   uno.playTimeAria = "5 minute and upwards";
   game.push(uno);
-
-
 
   const monopoly = document.getElementById("monopoly");
   monopoly.name = "Monopoly";
@@ -171,7 +167,6 @@ function createGameArray() {
   game.push(risk);
 
   return game;
-
 }
 const games = createGameArray();
 
