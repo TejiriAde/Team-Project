@@ -98,6 +98,14 @@ h3 {
   background-color: transparent;
   position: absolute;
 }
+
+#eye-con-1:hover {
+  color: orangered;
+}
+
+#eye-con-2:hover {
+  color: orangered;
+}
 /* #game-summary {
   padding-top: 35px;
 } */
@@ -208,6 +216,18 @@ li {
   #check {
     display: none;
   }
+  .gallery-image {
+    width: 250px;
+  }
+  #eye-con-1 {
+    top: 240px;
+    left: 40px;
+  }
+
+  #eye-con-2 {
+    top: 240px;
+    left: 40px;
+  }
 }
 
 /* form styling */
@@ -280,6 +300,8 @@ li {
 #formBox {
   display: flex;
   padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 #game-form {
@@ -357,6 +379,10 @@ li {
   }
   #review-info-container {
     width: 90vw;
+  }
+  #formBox {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
