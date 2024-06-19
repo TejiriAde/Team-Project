@@ -3,18 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Team Project</title>
   </head>
-  <body>
+
+  <body><div id ="games-bar"></div>
+
+    <!-- Mobile nav  -->
+<nav id="mobile-nav-bar">
+  <img id="logo-style" src="./assets/logo-400px.png" alt="im board logo">
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i id="hamburger-icon" class="fa-solid fa-bars" alt="menu"></i>
+  </label>
+  <div class="nav-mobile">
+    <a href="#games-bar">Games</a>
+    <a href="#risk">Game Summary</a>
+    <a href="#submit-button">Leave review</a>
+  </div>
+</nav>
+
+
     <header class="header-bar">
       <!-- THIS IS MY NAVBAR -->
       <nav class="nav-bar">
         <ul>
           <li><img id="logo-style" src="./assets/logo-400px.png" alt="im board logo"></li>
-          <li><a href="#games" class="nav-links">Games</a></li>
-          <li><a href="#game-summary" class="nav-links">Game Summary</a></li>
-          <li><a href="#leave-review" class="nav-links">Leave Review</a></li>
+          <li><a href="#games-bar" class="nav-links">Games</a></li>
+          <li><a href="#eye-con-1" class="nav-links">Game Summary</a></li>
+          <li><a href="#submit-button" class="nav-links">Leave Review</a></li>
         </ul>
       </nav>
     </header>
@@ -24,49 +41,58 @@
         <h2>A selection of top board games</h2>
         <div id="game-gallery-container">
           <div class="gallery-item">
+            
+<i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/pictionary-1080px.jpg" alt="pictionary game" id="pictionary">
-          <h3>Pictionary</h3><p class="sub-title">Group drawing game</p>
+          <h3>Pictionary</h3></i><p class="sub-title">Group drawing game</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-2"></i>
           <img class="gallery-image" src="./assets/uno-1080px.jpg" alt="Uno game" id="uno">
-          <h3>Uno</h3><p class="sub-title">Group drawing game</p>
+          <h3>Uno</h3><p class="sub-title">Fast paced card game</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/monopoly-1080px.jpg" alt="Monopoly game" id="monopoly">
-          <h3>Monopoly</h3><p class="sub-title">Group drawing game</p>
+          <h3>Monopoly</h3><p class="sub-title">Capitalism based boardgame</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-2"></i>
           <img class="gallery-image" src="./assets/scrabble-1080px.jpg" alt="Scrabble game" id="scrabble">
-          <h3>Scrabble</h3><p class="sub-title">Group drawing game</p>
+          <h3>Scrabble</h3><p class="sub-title">Word forming boardgame</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/guesswho-1080px.jpg" alt="Guess Who game" id="guesswho">
-          <h3>Guess Who</h3><p class="sub-title">Group drawing game</p>
+          <h3>Guess Who</h3><p class="sub-title">Deduction based guessing game</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-2"></i>
           <img class="gallery-image" src="./assets/chess-1080px.jpg" alt="Chess game" id="chess">
-          <h3>Chess</h3><p class="sub-title">Group drawing game</p>
+          <h3>Chess</h3><p class="sub-title">Classic two-player strategy</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/hungry-hungry-hippos-1080px.jpg" alt="Hungry Hungry Hippo game" id="hungry-hungry-hippos">
-          <h3>Hungry Hungry Hippos</h3><p class="sub-title">Group drawing game</p>
+          <h3>Hungry Hungry Hippos</h3><p class="sub-title">Feed those fine hippopotami</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/jenga-1080px.jpg" alt="Jenga game" id="jenga">
-          <h3>Jenga</h3><p class="sub-title">Group drawing game</p>
+          <h3>Jenga</h3><p class="sub-title">Tumbling towers</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-2"></i>
           <img class="gallery-image" src="./assets/cluedo-1080px.jpg" alt="Cluedo game" id="cluedo">
-          <h3>Cluedo</h3><p class="sub-title">Group drawing game</p>
+          <h3>Cluedo</h3><p class="sub-title">Murder mystery boardgame</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item"> <i class="fa-solid fa-eye" id="eye-con-1"></i>
           <img class="gallery-image" src="./assets/risk-1080px.jpg" alt="Risk game" id="risk">
-          <h3>Risk</h3><p class="sub-title">Group drawing game</p>
+          <h3>Risk</h3><p class="sub-title">Global conquest</p>
         </div>
       </div>
+
       </section>
+      <div>
+
+      <div id = "about-game"></div>
+      </section>
+
       <section id="game-summary">
         <h2>Game information</h2>
+
         <p>Experience the ultimate game night with our eclectic mix of classics,
            offering something for every type of player. Sharpen your strategy skills
            with a game of chess or dive into world domination with the thrilling
@@ -77,16 +103,28 @@
            intriguing mysteries in Cluedo. Test your steadiness with a tense game of Jenga
            or race to victory in a frantic round of Hungry Hippos. With such a diverse selection,
            every game night is a new adventure waiting to happen!</p>
+
+        <p id="game-text">Explore an epic world filled with thrilling quests, fierce battles,
+           and unforgettable adventures. Customize your hero with unique
+           skills and powerful gear to dominate your enemies.
+           Join forces with friends to conquer challenging dungeons
+           and claim legendary treasures.</p>
+
         <div id="game-info"></div>
-        <div>
       </section>
+
+      <div id="form-review-section">
+
       <section id="leave-review">
-<h2>Leave a review</h2>
+
+
+<h2>Reviews</h2>
 
 <div id="review-info-container"></div>
 </section>
-      <section>
+      <section id="formBox">
         <form id="game-form">
+        <h2>Leave a Review</h2>
           <label for="game_name">Game name: </label>
           <select type="select" name="game_name" id="game_name" >
             <option value="pictionary">Pictionary</option>
@@ -101,7 +139,7 @@
             <option value="risk">Risk</option>
           </select>
           <label for="username">Name: </label>
-          <input type="text" name="username" id="username" />
+          <input type="text" name="username" id="formUsername" />
           <label for="review">Comment: </label>
           <textarea name="review" id="review" rows="5"></textarea>
           <fieldset class="rating">
@@ -122,11 +160,19 @@
             <input type="radio" id="one-star" name="rating" value="★" />
             <label for="one-star">★</label>
           </fieldset>
+          <br>
           <button id="submit-button" type="submit">Submit</button>
         </form>
+      </section>
+      
+    </div>
+
     </main>
-    <footer></footer>
+    <footer>
+      <p>© Team Tech Eggs</p>
+    </footer>
     <div id="app"></div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/39f4540d77.js" crossorigin="anonymous" defer></script>
   </body>
 </html>

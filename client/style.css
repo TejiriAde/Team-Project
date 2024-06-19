@@ -4,7 +4,11 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+}
 
+header {
+  position: relative;
+  z-index: 9999;
 }
 
 /* page behaviours  */
@@ -21,6 +25,10 @@ main {
 
 section {
   padding-bottom: 50px;
+}
+
+#filler-div {
+  display: block;
 }
 
 /* typography styling  */
@@ -60,6 +68,7 @@ h3 {
 .gallery-item {
   padding: 20px;
   flex-shrink: 0;
+  position: relative;
 }
 
 .gallery-item:hover {
@@ -70,6 +79,38 @@ h3 {
   width: 350px;
 }
 
+#eye-con-1 {
+  top: 340px;
+  left: 40px;
+
+  color: teal;
+  background-color: transparent;
+  position: absolute;
+}
+
+#eye-con-2 {
+  top: 340px;
+  left: 40px;
+
+  color: turquoise;
+  background-color: transparent;
+  position: absolute;
+}
+
+#eye-con-1:hover {
+  color: orangered;
+}
+
+#eye-con-2:hover {
+  color: orangered;
+}
+/* #game-summary {
+  padding-top: 35px;
+} */
+
+#about-game {
+  top: 350px;
+}
 /* navbar styling */
 
 .nav-bar {
@@ -87,6 +128,8 @@ li {
   display: block;
   padding: 35px;
   color: white;
+  position: relative;
+  z-index: 9999;
 }
 
 .nav-links:hover {
@@ -100,51 +143,150 @@ li {
   width: 200px;
 }
 
+/* mobile nav bar  */
+
+#mobile-nav-bar {
+  padding: 0;
+  background-color: orangered;
+  color: white;
+  display: none;
+  height: 80px;
+  position: relative;
+  z-index: 9999;
+}
+
+.checkbtn {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  background: rgb(161, 43, 0);
+  z-index: 9;
+  width: 100vw;
+}
+
+.nav-mobile a {
+  color: white;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+#check:checked ~ .nav-mobile {
+  display: block;
+}
+
+@media (width <= 768px) {
+  .checkbtn {
+    display: block;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 20px;
+  }
+  .nav-mobile {
+    top: 80px;
+    width: 100%;
+  }
+  .nav-mobile a {
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  .nav-mobile a:hover {
+    background-color: orangered;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+  }
+  .nav-bar {
+    display: none;
+  }
+  #mobile-nav-bar {
+    display: block;
+    position: fixed;
+    width: 100vw;
+  }
+  #check {
+    display: none;
+  }
+  .gallery-image {
+    width: 250px;
+  }
+  #eye-con-1 {
+    top: 240px;
+    left: 40px;
+  }
+
+  #eye-con-2 {
+    top: 240px;
+    left: 40px;
+  }
+}
+
 /* form styling */
 
-#game-info {
+#review-info-container {
   display: flex;
   flex-direction: column;
+  height: 400px;
+  width: 45vw;
+  overflow: scroll;
+  padding-bottom: 10px;
+}
+
+#review-info {
+  display: flex;
+  flex-direction: row;
   gap: 1em;
   bottom: 0;
-  max-width: 45vw;
-  /* outline: 2px solid #646cff; */
+  padding-top: 40px;
+}
+#review-info div {
+  display: flex;
 }
 
-#game-info div {
+#review-info div p {
   display: flex;
-  flex-direction: row;
-  gap: 1em;
-  /* outline: 2px solid #646cff; */
-}
-
-#game-info div p {
-  display: flex;
-  flex-direction: row;
   flex-shrink: 1;
-  /* outline: 2px solid #646cff; */
   text-align: left;
 }
 
-#review-info-container {
-  height: 300px;
-  width: 500px;
-  border: 1px solid black;
-  overflow: scroll;
+#game-name-title {
+  display: flex;
+  flex-basis: 40ch;
 }
 
-#inputReviews {
-  padding: 12px;
+#form-review-section {
+  display: flex;
+  flex-direction: row;
 }
 
 #rating {
   margin-right: 10px;
   flex-basis: 20ch;
+  /* font-size: small; */
+  color: orangered;
+  justify-content: flex-end;
+}
+
+.rating-div {
+  position: relative;
+  z-index: -5;
+  bottom: 3.5px;
 }
 
 #comment-box {
+  display: flex;
   flex-grow: 1;
-  flex-basis: 150ch;
+  flex-basis: 5ch;
+}
+#comment-box-container {
+  padding-bottom: 20px;
 }
 
 .rating {
@@ -153,13 +295,23 @@ li {
 
 /* form submission styling  */
 
+#formBox {
+  display: flex;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 #game-form {
   display: flex;
   flex-direction: column;
+  width: 45vw;
+  padding: 2px;
   gap: 1em;
-  bottom: 0;
-  max-width: 45vw;
-  /* outline: 2px solid #646cff; */
+}
+
+#game-form label {
+  font-size: 20px;
 }
 
 #submit-button {
@@ -181,17 +333,65 @@ li {
   cursor: pointer;
 }
 
+#game_name {
+  height: 40px;
+  font-size: medium;
+}
+
+#formUsername {
+  height: 40px;
+  font-size: medium;
+}
+
+#game_name:hover {
+  cursor: pointer;
+}
+
+#username {
+  display: flex;
+  flex-basis: 17ch;
+  height: 35px;
+  flex-shrink: 0;
+  font-weight: 650;
+}
+
 /* media queries  */
 
 @media (width <= 768px) {
   #game-form {
-    max-width: 100vw;
+    width: 90vw;
+  }
+  #filler-div {
+    display: block;
   }
   #game-info {
     display: flex;
     flex-direction: column;
     gap: 1em;
     bottom: 0;
-    max-width: 100vw;
+    width: 90vw;
   }
+  #form-review-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #review-info-container {
+    width: 90vw;
+  }
+  #formBox {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* footer styling  */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(63, 17, 0);
+  bottom: 0;
+  padding-bottom: 0;
+  color: white;
 }
