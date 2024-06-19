@@ -15,7 +15,7 @@ async function fetchAndRenderGameForm() {
   userReviews.forEach((msg) => {
     const userReviewsDiv = document.createElement("div");
     userReviewsDiv.id = "inputReviews";
-    userReviewsDiv.innerHTML = `Name: ${msg.username} <br> Game: ${msg.game_name} <br> Rating: ${msg.rating} <br> Review: ${msg.review} </p>`;
+    userReviewsDiv.innerHTML = `<div id="review-info"><p id="username"> ${msg.username}</p> <p id="game-name-title">${msg.game_name}</p> <div class="rating-div"><p id="rating">${msg.rating}</p></div></div><div id="comment-box-container><p id="comment-box">${msg.review} </p></div>`;
     reviewDiv.appendChild(userReviewsDiv);
   });
   function updateScroll() {
