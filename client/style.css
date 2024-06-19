@@ -189,30 +189,27 @@ li {
   display: flex;
   flex-direction: row;
   gap: 1em;
-  /* outline: 2px solid #646cff; */
 }
 
 #game-info div p {
   display: flex;
   flex-direction: row;
   flex-shrink: 1;
-  /* outline: 2px solid #646cff; */
   text-align: left;
 }
 
-#leave-review {
+#form-review-section {
   display: flex;
-  position: relative;
+  flex-direction: row;
+  gap: 3.5em;
 }
 
 #review-info-container {
   display: flex;
-  position: absolute;
   flex-direction: column;
   height: 400px;
-  width: 40%;
+  width: 45vw;
   overflow: scroll;
-  top: 40px;
   padding-bottom: 10px;
 }
 
@@ -238,35 +235,26 @@ li {
 
 #formBox {
   display: flex;
-  position: relative;
   padding: 10px;
 }
 
 #game-form {
   display: flex;
-  position: absolute;
   flex-direction: column;
-  right: 1vw;
-  width: 40%;
+  width: 45vw;
   height: 400px;
   padding: 2px;
-  font-size: 10px;
   gap: 1em;
-  top: -75px;
 }
 
 #game-form label {
   font-size: 20px;
 }
 
-#game-form h1 {
-  text-align: center;
-}
-
 #submit-button {
   background-color: orangered;
   color: white;
-  height: 3em;
+  height: 12em;
   border: none;
   border-radius: 1.5em;
   font-weight: 600;
@@ -286,7 +274,7 @@ li {
 
 @media (width <= 768px) {
   #game-form {
-    max-width: 100vw;
+    width: 90vw;
   }
   #filler-div {
     display: block;
@@ -296,7 +284,14 @@ li {
     flex-direction: column;
     gap: 1em;
     bottom: 0;
-    max-width: 100vw;
+    width: 90vw;
+  }
+  #form-review-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #review-info-container {
+    width: 90vw;
   }
 }
 
