@@ -63,16 +63,8 @@ let currentGame;
 
 
 function createGameArray() {
-  let gameArray = [];
-  const uno = document.getElementById("uno");
-  uno.name = "Uno";
-  uno.summary =
-    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
-  uno.noOfPlayers = "2+";
-  uno.noOfPlayersAria = "2 or more";
-  uno.playerTime = "5 minutes - forever";
-  uno.playTime = "5 minute and upwards";
-  game.push(uno);
+  let game = [];
+
 
   const pictionary = document.getElementById("pictionary");
   pictionary.name = "Pictionary";
@@ -81,8 +73,21 @@ function createGameArray() {
   pictionary.noOfPlayers = "4+";
   pictionary.noOfPlayers.ariaLabel = "4 or more";
   pictionary.playTime = "30 minutes - 1hr";
-  pictionary.playTime = "30 minutes to 1 hour";
+
+  pictionary.playTimeAria = "30 minutes to 1 hour";
   game.push(pictionary);
+
+  const uno = document.getElementById("uno");
+  uno.name = "Uno";
+  uno.summary =
+    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
+  uno.noOfPlayers = "2+";
+  uno.noOfPlayersAria = "2 or more";
+  uno.playTime = "5 minutes - forever";
+  uno.playTimeAria = "5 minute and upwards";
+  game.push(uno);
+
+
 
   const monopoly = document.getElementById("monopoly");
   monopoly.name = "Monopoly";
@@ -160,17 +165,19 @@ function createGameArray() {
     "A Globe spanning game of chance and conquest where players collect cards to trade for resource bonues and compete for territory bonuses all to increase their chances of wiping out their opponents and ruling the world";
   risk.noOfPlayers = "2 - 6 ";
   risk.noOfPlayersAria = "2 to 6";
-  risk.playerTime = "1 - 3hrs";
+
+  risk.playTime = "1 - 3hrs";
   risk.playTimeAria = "1 to 3 hours";
   game.push(risk);
 
-  return gameArray;
+  return game;
+
 }
 const games = createGameArray();
 
 let gameDataDisplay = document.getElementById("game-info");
 
-game.forEach((thisGame, index) => {
+games.forEach((thisGame, index) => {
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
     gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><br><br><p> Description: ${thisGame.summary}`;
