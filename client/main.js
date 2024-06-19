@@ -61,8 +61,10 @@ async function submitButton(event) {
 
 let currentGame;
 
+
 function createGameArray() {
   let game = [];
+
 
   const pictionary = document.getElementById("pictionary");
   pictionary.name = "Pictionary";
@@ -71,6 +73,7 @@ function createGameArray() {
   pictionary.noOfPlayers = "4+";
   pictionary.noOfPlayers.ariaLabel = "4 or more";
   pictionary.playTime = "30 minutes - 1hr";
+
   pictionary.playTimeAria = "30 minutes to 1 hour";
   game.push(pictionary);
 
@@ -83,6 +86,8 @@ function createGameArray() {
   uno.playTime = "5 minutes - forever";
   uno.playTimeAria = "5 minute and upwards";
   game.push(uno);
+
+
 
   const monopoly = document.getElementById("monopoly");
   monopoly.name = "Monopoly";
@@ -160,11 +165,13 @@ function createGameArray() {
     "A Globe spanning game of chance and conquest where players collect cards to trade for resource bonues and compete for territory bonuses all to increase their chances of wiping out their opponents and ruling the world";
   risk.noOfPlayers = "2 - 6 ";
   risk.noOfPlayersAria = "2 to 6";
+
   risk.playTime = "1 - 3hrs";
   risk.playTimeAria = "1 to 3 hours";
   game.push(risk);
 
   return game;
+
 }
 const games = createGameArray();
 
