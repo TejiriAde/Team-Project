@@ -61,6 +61,7 @@ async function submitButton(event) {
 
 let currentGame;
 
+
 function createGameArray() {
   let gameArray = [];
   const uno = document.getElementById("uno");
@@ -169,10 +170,10 @@ const games = createGameArray();
 
 let gameDataDisplay = document.getElementById("game-info");
 
-games.forEach((thisGame, index) => {
+game.forEach((thisGame, index) => {
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
-    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playerTime} </p><br><br><p> Description: ${thisGame.summary}`;
-    gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playerTime}. ${thisGame.summary}.`;
+    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><br><br><p> Description: ${thisGame.summary}`;
+    gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
 });
