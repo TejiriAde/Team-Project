@@ -59,6 +59,12 @@ async function submitButton(event) {
   }
 }
 
+// window.addEventListener("hashchange", function () {
+//   // this is too adjust where the anchor links land
+//   window.scrollTo(window.scrollX, window.scrollY + 100);
+//   console.log(window.scrollY);
+// });
+
 let currentGame;
 
 function createGameArray() {
