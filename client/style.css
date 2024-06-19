@@ -125,6 +125,17 @@ li {
   text-align: left;
 }
 
+#review-info-container {
+  height: 300px;
+  width: 500px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+#inputReviews {
+  padding: 12px;
+}
+
 #rating {
   margin-right: 10px;
   flex-basis: 20ch;
