@@ -61,6 +61,7 @@ async function submitButton(event) {
 
 let currentGame;
 
+
 let game = [];
 
 const pictionary = document.getElementById("pictionary");
@@ -164,12 +165,13 @@ risk.playerTime = "1 - 3hrs";
 risk.playTimeAria = "1 to 3 hours";
 game.push(risk);
 
+
 let gameDataDisplay = document.getElementById("game-info");
 
 game.forEach((thisGame, index) => {
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
-    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playerTime} </p><br><br><p> Description: ${thisGame.summary}`;
-    gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playerTime}. ${thisGame.summary}.`;
+    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><br><br><p> Description: ${thisGame.summary}`;
+    gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
 });
