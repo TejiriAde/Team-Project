@@ -1,17 +1,7 @@
-
 let currentGame;
 
 function createGameArray() {
   let gameArray = [];
-  const uno = document.getElementById("uno");
-  uno.name = "Uno";
-  uno.summary =
-    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
-  uno.noOfPlayers = "2+";
-  uno.noOfPlayersAria = "2 or more";
-  uno.playerTime = "5 minutes - forever";
-  uno.playTime = "5 minute and upwards";
-  game.push(uno);
 
   const pictionary = document.getElementById("pictionary");
   pictionary.name = "Pictionary";
@@ -22,6 +12,16 @@ function createGameArray() {
   pictionary.playTime = "30 minutes - 1hr";
   pictionary.playTime = "30 minutes to 1 hour";
   game.push(pictionary);
+
+  const uno = document.getElementById("uno");
+  uno.name = "Uno";
+  uno.summary =
+    "This fast paced card game based on matching colours and numbers in combination with actions cards to beat your opponents mercilessly";
+  uno.noOfPlayers = "2+";
+  uno.noOfPlayersAria = "2 or more";
+  uno.playerTime = "5 minutes - forever";
+  uno.playTime = "5 minute and upwards";
+  game.push(uno);
 
   const monopoly = document.getElementById("monopoly");
   monopoly.name = "Monopoly";
@@ -117,8 +117,6 @@ games.forEach((thisGame, index) => {
   });
 });
 
-const form = document.getElementById("game-form");
-
 async function fetchAndRenderGameForm() {
   const response = await fetch("http://localhost:7430/reviews");
   const userReviews = await response.json();
@@ -140,33 +138,25 @@ async function fetchAndRenderGameForm() {
 }
 fetchAndRenderGameForm();
 
-form.addEventListener("submit", submitButton);
-async function submitButton(event) {
-  event.preventDefault();
-  const formData = new FormData(form);
-  const formValues = Object.fromEntries(formData);
+try {
+  const response = await fetch("http://localhost:7430/reviews", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formValues),
+  });
 
-  try {
-    const response = await fetch("http://localhost:7430/reviews", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+  const data = await response.json();
 
-    const data = await response.json();
-
-    if (data.success) {
-      console.log("DATA IS SAVED - ALL IS WELL");
-      fetchAndRenderGameForm();
-      form.reset();
-      // console.log(formValues);
-    } else {
-      console.log("NOOO IT DIDN'T WORK!!!!!");
-    }
-  } catch (error) {
-    console.error("Error:", error);
+  if (data.success) {
+    console.log("DATA IS SAVED - ALL IS WELL");
+    fetchAndRenderGameForm();
+    form.reset();
+    // console.log(formValues);
+  } else {
+    console.log("NOOO IT DIDN'T WORK!!!!!");
   }
+} catch (error) {
+  console.error("Error:", error);
 }
-
