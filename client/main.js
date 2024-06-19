@@ -134,7 +134,7 @@ function createGameArray() {
   game.push(hungryhungryHippos);
 
   const jenga = document.getElementById("jenga");
-  henga.name = "Jenga";
+  jenga.name = "Jenga";
   jenga.summary =
     "Steady hands and a sense of confindience are required in this skill based game where players take it in turns to remove blocks from the towr one by one before placing them on top. Whoever causes it to fall can consider themselves the loser";
   jenga.noOfPlayers = "2+";
