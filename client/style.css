@@ -94,7 +94,13 @@ h3 {
   background-color: transparent;
   position: absolute;
 }
+/* #game-summary {
+  padding-top: 35px;
+} */
 
+#about-game {
+  top: 350px;
+}
 /* navbar styling */
 
 .nav-bar {
