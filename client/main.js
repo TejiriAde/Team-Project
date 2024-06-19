@@ -20,7 +20,7 @@ async function fetchAndRenderGameForm() {
   });
   function updateScroll() {
     let element = document.getElementById("review-info-container");
-    element.scrollTop = element.scrollHeight;
+    element.scrollTop = -element.scrollHeight;
   }
   updateScroll();
 }
