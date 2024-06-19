@@ -23,7 +23,7 @@ section {
 }
 
 #filler-div {
-  display: none;
+  display: block;
 }
 
 /* typography styling  */
@@ -63,6 +63,7 @@ h3 {
 .gallery-item {
   padding: 20px;
   flex-shrink: 0;
+  position: relative;
 }
 
 .gallery-item:hover {
@@ -71,6 +72,24 @@ h3 {
 
 .gallery-image {
   width: 350px;
+}
+
+#eye-con-1 {
+  top: 340px;
+  left: 40px;
+  z-index: 9;
+  color: teal;
+  background-color: transparent;
+  position: absolute;
+}
+
+#eye-con-2 {
+  top: 340px;
+  left: 40px;
+  z-index: 9;
+  color: turquoise;
+  background-color: transparent;
+  position: absolute;
 }
 
 /* navbar styling */
