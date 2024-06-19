@@ -99,6 +99,75 @@ li {
   width: 200px;
 }
 
+/* mobile nav bar  */
+
+#mobile-nav-bar {
+  padding: 0;
+  background-color: orangered;
+  color: white;
+  display: none;
+  height: 80px;
+}
+
+.checkbtn {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  background: rgb(161, 43, 0);
+  z-index: 1;
+  width: 200px;
+}
+
+.nav-mobile a {
+  color: white;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+#check:checked ~ .nav-mobile {
+  display: block;
+}
+
+@media (width <= 768px) {
+  .checkbtn {
+    display: block;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+  }
+  .nav-mobile {
+    top: 80px;
+    width: 100%;
+  }
+  .nav-mobile a {
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+  }
+  .nav-mobile a:hover {
+    background-color: orangered;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+  }
+  .nav-bar {
+    display: none;
+  }
+  #mobile-nav-bar {
+    display: block;
+  }
+  #check {
+    display: none;
+  }
+}
+
 /* form styling */
 
 #game-info {

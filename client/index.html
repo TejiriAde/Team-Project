@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Team Project</title>
   </head>
   <body>
+    <!-- Mobile nav  -->
+<nav id="mobile-nav-bar">
+  <img id="logo-style" src="./assets/logo-400px.png" alt="im board logo">
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i id="hamburger-icon" class="fa-solid fa-bars" alt="menu"></i>
+  </label>
+  <div class="nav-mobile">
+    <a href="#games">Games</a>
+    <a href="game-summary">Game Summary</a>
+    <a href="leave-review">Leave review</a>
+  </div>
+</nav>
+
     <header class="header-bar">
       <!-- THIS IS MY NAVBAR -->
       <nav class="nav-bar">
@@ -116,6 +131,7 @@
     </main>
     <footer></footer>
     <div id="app"></div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/39f4540d77.js" crossorigin="anonymous" defer></script>
   </body>
 </html>
