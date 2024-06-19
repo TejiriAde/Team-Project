@@ -232,7 +232,7 @@ li {
 
 #review-info-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   height: 400px;
   width: 45vw;
   overflow: scroll;
