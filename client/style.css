@@ -20,7 +20,7 @@ html {
 /* page styling */
 
 main {
-  padding: 2em;
+  padding: 3em;
 }
 
 section {
@@ -34,13 +34,14 @@ section {
 /* typography styling  */
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
 }
 
 h2 {
   font-size: 2em;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 h3 {
@@ -328,11 +329,39 @@ li {
   font-size: 18px;
 }
 
-.rating {
+.filter-button {
+  background-color: orangered;
+  color: white;
+  height: 3em;
   border: none;
+  border-radius: 1.5em;
+  font-weight: 600;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-bottom: 20px;
+}
+
+.filter-button:hover {
+  background-color: rgb(255, 124, 77);
+  color: white;
+  height: 3em;
+  border: solid;
+  border-color: orangered;
+  border-radius: 1.5em;
+  cursor: pointer;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-bottom: 20px;
 }
 
 /* form submission styling  */
+
+.rating {
+  border: none;
+}
+.rating label {
+  padding-right: 25px;
+}
 
 #formBox {
   display: flex;
