@@ -6,6 +6,8 @@
 
 ### Team members:
 
+Theo
+
 ## Project description:
 
 A site which both allows you to create a virtual pantry of all the food items in your house and see which recipes you might want to cook using those ingredients.
