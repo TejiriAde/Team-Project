@@ -2,7 +2,7 @@
 //https://team-project-0ss1.onrender.com/ server
 
 const form = document.getElementById("game-form");
-
+let thisIndex = 0;
 async function fetchAndRenderGameForm() {
   const response = await fetch(
     "https://team-project-0ss1.onrender.com/reviews"
@@ -216,39 +216,48 @@ console.log(games);
 let gameDataDisplay = document.getElementById("game-text");
 let tempTab = 4;
 games.forEach((thisGame, index) => {
-  thisGame.tabIndex = tempTab;
-  tempTab = tempTab + 1;
-  thisGame.imgIndex = index;
   // addEventListener("focus", (event) => {
   //   thisGame.style.outline = "1px solid orange";
   // });
+  thisGame.addEventListener("keypress", () => {
+    if (event.key === "Enter") {
+      currentGame = thisGame.name;
+      thisIndex = index;
+      gameDataDisplay.innerHTML = "";
+      gameDataDisplay.innerHTML = `<div class="game-summary-contents" ><p> Description: ${thisGame.summary}</div><div class="game-summary-contents" ><p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p></div>`;
 
+      // gameDataDisplay.tabIndex = 14;
+      gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
+    }
+  });
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
+    thisIndex = index;
     gameDataDisplay.innerHTML = "";
     gameDataDisplay.innerHTML = `<div class="game-summary-contents" ><p> Description: ${thisGame.summary}</div><div class="game-summary-contents" ><p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p></div>`;
-    gameDataDisplay.tabIndex = 14;
+    // gameDataDisplay.tabIndex = 14;
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
+
+  thisGame.tabIndex = tempTab + index;
 });
 
-//BUTTONS
+let forwardButton = document.querySelector("#forBtn");
+const galleryViewer = document.getElementById("game-gallery-container");
+forwardButton.addEventListener("click", () => {
+  let scrollDistance = window.innerWidth * 0.9;
+  console.log(window.innerWidth);
+  console.log(scrollDistance);
 
-// const navigate = (direction) => {
-//   let currentIndex = 0;
-//   games.forEach((game, index) => {
-//     if (game.src === games.src) {
-//       currentIndex = index;
-//     }
-//   });
+  galleryViewer.scrollBy(scrollDistance, 0);
+  thisIndex = thisIndex + 1;
+});
+let backButton = document.querySelector("#backBtn");
+backButton.addEventListener("click", () => {
+  let scrollDistance = window.innerWidth * 0.9;
+  console.log(window.innerWidth);
+  console.log(scrollDistance);
 
-//   const newIndex =
-//     direction === "forward"
-//       ? (currentIndex + 1) % games.length
-//       : (currentIndex - 1 + games.length) % games.length;
-//   games.src = games[newIndex].src;
-//   //  thisIndex
-//   //  if forward take next index as thisINdex + 1
-//   // if back thake next index as thisindex -1
-
-// };
+  galleryViewer.scrollBy(-scrollDistance, 0);
+  thisIndex = thisIndex + 1;
+});
