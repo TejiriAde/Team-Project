@@ -2,7 +2,7 @@
 //https://team-project-0ss1.onrender.com/ server
 
 const form = document.getElementById("game-form");
-
+let thisIndex = 0;
 async function fetchAndRenderGameForm() {
   const response = await fetch(
     "https://team-project-0ss1.onrender.com/reviews"
@@ -215,20 +215,30 @@ const games = createGameArray();
 let gameDataDisplay = document.getElementById("game-text");
 let tempTab = 4;
 games.forEach((thisGame, index) => {
-  thisGame.tabIndex = tempTab;
-  tempTab = tempTab + 1;
-  thisGame.imgIndex = index;
   // addEventListener("focus", (event) => {
   //   thisGame.style.outline = "1px solid orange";
   // });
+  thisGame.addEventListener("keypress", () => {
+    if (event.key === "Enter") {
+      currentGame = thisGame.name;
+      thisIndex = index;
+      gameDataDisplay.innerHTML = "";
+      gameDataDisplay.innerHTML = `<div class="game-summary-contents" ><p> Description: ${thisGame.summary}</div><div class="game-summary-contents" ><p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p></div>`;
 
+      // gameDataDisplay.tabIndex = 14;
+      gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
+    }
+  });
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
+    thisIndex = index;
     gameDataDisplay.innerHTML = "";
     gameDataDisplay.innerHTML = `<div class="game-summary-contents" ><p> Description: ${thisGame.summary}</div><div class="game-summary-contents" ><p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p></div>`;
-    gameDataDisplay.tabIndex = 14;
+    // gameDataDisplay.tabIndex = 14;
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
+
+  thisGame.tabIndex = tempTab + index;
 });
 
 //BUTTONS
@@ -252,14 +262,11 @@ games.forEach((thisGame, index) => {
 
 // };
 
-document.querySelector("#forBtn").addEventListener("click", () => {
-  let thisIndex = document.activeElement.imgIndex;
-  let nextIndex = thisIndex + 1;
-  console.log(document.activeElement.imgIndex);
-  console.log("Been lciked");
-  games[nextIndex].focus;
-  thisIndex = document.activeElement.imgIndex;
-  console.log(thisIndex);
+let FB = document.querySelector("#forBtn");
+FB.addEventListener("click", () => {
+  const galleryViewer = document.getElementById("game-gallery-container");
+  galleryViewer.scrollIntoView(games[thisIndex + 1]);
+  thisIndex = thisIndex + 1;
 });
 document
   .querySelector("#backBtn")
