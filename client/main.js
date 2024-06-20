@@ -36,12 +36,10 @@ mostRecentFilter.addEventListener("click", fetchAndRenderGameForm);
 
 const filterRating = document.querySelector("#rating-filter");
 
-let URL =
-  "http://localhost:7430/sortbyrating" ??
-  "https://team-project-0ss1.onrender.com/sortbyrating";
+let sortByRatingURL = "https://team-project-0ss1.onrender.com/sortbyrating";
 
 async function sortByRating() {
-  const response = await fetch(URL);
+  const response = await fetch(sortByRatingURL);
   const userReviews = await response.json();
   console.log(userReviews);
   const reviewDiv = document.getElementById("review-info-container");

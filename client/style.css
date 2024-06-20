@@ -109,6 +109,21 @@ p {
 #eye-con-2:hover {
   color: orangered;
 }
+
+/* game summary styling  */
+
+#game-summary-body-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.game-summary-contents {
+  width: 45vw;
+  width: 45dvw;
+}
+
 /* #game-summary {
   padding-top: 35px;
 } */
@@ -240,6 +255,7 @@ li {
   flex-direction: column-reverse;
   height: 400px;
   width: 45vw;
+  width: 45dvw;
   overflow: scroll;
   padding-bottom: 10px;
 }
@@ -315,6 +331,7 @@ li {
   display: flex;
   flex-direction: column;
   width: 45vw;
+  width: 45dvw;
   padding: 2px;
   gap: 1em;
 }
@@ -396,6 +413,13 @@ li {
     display: flex;
     flex-basis: 100ch;
     font-size: 18px;
+  }
+  #game-summary-body-text {
+    flex-direction: column;
+  }
+  .game-summary-contents {
+    width: 90vw;
+    width: 90dvw;
   }
 }
 
