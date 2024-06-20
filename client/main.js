@@ -262,12 +262,22 @@ games.forEach((thisGame, index) => {
 
 // };
 
-let FB = document.querySelector("#forBtn");
-FB.addEventListener("click", () => {
-  const galleryViewer = document.getElementById("game-gallery-container");
-  galleryViewer.scrollIntoView(games[thisIndex + 1]);
+let forwardButton = document.querySelector("#forBtn");
+const galleryViewer = document.getElementById("game-gallery-container");
+forwardButton.addEventListener("click", () => {
+  let scrollDistance = window.innerWidth * 0.9;
+  console.log(window.innerWidth);
+  console.log(scrollDistance);
+
+  galleryViewer.scrollBy(scrollDistance, 0);
   thisIndex = thisIndex + 1;
 });
-document
-  .querySelector("#backBtn")
-  .addEventListener("click", () => navigate("backward"));
+let backButton = document.querySelector("#backBtn");
+backButton.addEventListener("click", () => {
+  let scrollDistance = window.innerWidth * 0.9;
+  console.log(window.innerWidth);
+  console.log(scrollDistance);
+
+  galleryViewer.scrollBy(-scrollDistance, 0);
+  thisIndex = thisIndex + 1;
+});
