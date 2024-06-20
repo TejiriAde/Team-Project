@@ -245,7 +245,7 @@ games.forEach((thisGame, index) => {
 let forwardButton = document.querySelector("#forBtn");
 const galleryViewer = document.getElementById("game-gallery-container");
 forwardButton.addEventListener("click", () => {
-  let scrollDistance = window.innerWidth * 0.9;
+  let scrollDistance = window.innerWidth * 0.8;
   console.log(window.innerWidth);
   console.log(scrollDistance);
 
@@ -254,7 +254,7 @@ forwardButton.addEventListener("click", () => {
 });
 let backButton = document.querySelector("#backBtn");
 backButton.addEventListener("click", () => {
-  let scrollDistance = window.innerWidth * 0.9;
+  let scrollDistance = window.innerWidth * 0.8;
   console.log(window.innerWidth);
   console.log(scrollDistance);
 
