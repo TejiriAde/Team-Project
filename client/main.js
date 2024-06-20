@@ -177,8 +177,10 @@ function createGameArray() {
 const games = createGameArray();
 
 let gameDataDisplay = document.getElementById("game-text");
-
+let tempTab = 1;
 games.forEach((thisGame, index) => {
+  thisGame.tabIndex = tempTab;
+  tempTab = tempTab + 1;
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
     gameDataDisplay.innerHTML = "";
