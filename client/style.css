@@ -42,6 +42,7 @@ h1 {
 
 h2 {
   font-size: 2em;
+  padding-bottom: 15px;
 }
 
 h3 {
@@ -51,6 +52,10 @@ h3 {
 
 .sub-title {
   color: rgb(100, 100, 100);
+}
+
+p {
+  font-size: 18px;
 }
 
 /* game section styling  */
@@ -260,7 +265,8 @@ li {
 
 #game-name-title {
   display: flex;
-  flex-basis: 40ch;
+  flex-basis: 45ch;
+  font-size: 18px;
 }
 
 #form-review-section {
@@ -274,6 +280,7 @@ li {
   /* font-size: small; */
   color: orangered;
   justify-content: flex-end;
+  font-size: 18px;
 }
 
 .rating-div {
@@ -286,9 +293,11 @@ li {
   display: flex;
   flex-grow: 1;
   flex-basis: 5ch;
+  font-size: 18px;
 }
 #comment-box-container {
   padding-bottom: 20px;
+  font-size: 18px;
 }
 
 .rating {
@@ -337,12 +346,12 @@ li {
 
 #game_name {
   height: 40px;
-  font-size: medium;
+  font-size: 18px;
 }
 
 #formUsername {
   height: 40px;
-  font-size: medium;
+  font-size: 18px;
 }
 
 #game_name:hover {
@@ -379,10 +388,16 @@ li {
   }
   #review-info-container {
     width: 90vw;
+    width: 90dvw;
   }
   #formBox {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  #game-name-title {
+    display: flex;
+    flex-basis: 100ch;
+    font-size: 18px;
   }
 }
 
