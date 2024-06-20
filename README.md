@@ -1,16 +1,24 @@
-### Project name:
+### Project name: Im Board
 
 ### Render links:
 
-### Repo link:
+Front-end: https://team-project-1-xc83.onrender.com/
+back-end: https://team-project-0ss1.onrender.com/
+
+### Repo link: https://github.com/TejiriAde/Team-Project
 
 ### Team members:
 
-Theo
+- Theo
+- Jake
+- Teriji
+- Richard
+
+We are team Tech Eggs
 
 ## Project description:
 
-A site which both allows you to create a virtual pantry of all the food items in your house and see which recipes you might want to cook using those ingredients.
+A
 
 ## Problem domain:
 
@@ -20,18 +28,23 @@ It’s hard to know what game to choose, I would like a place to go and find a g
 
 As a user…
 
-As a user I want to be able to see a selection of games and their ratings.
+- As a user I want to be able to see a selection of games, click on it and see the information.
 
-As a user I want to be able to filter these games by highest/lowest rated.
+- As a user I want to be able to leave a review of the game.
 
-As a user I want to be able to see the release date of the games.
+- As a user I want this to be optimised for mobile.
 
-Stretch goals
-As a user I want to be able to see a highlight carousel of new games.
+- As a user I want to be able to see a carousel of games.
 
-As a user I want to be able to filter the games by genre.
+## Stretch goals
 
-As a user I want to be able to able to vote on a game.
+- As a user I want to be able to use arrow buttons to cycle through the game images
+
+- As a user I want to be able to filter these games by highest/lowest rated.
+
+- As a user I want there to be smooth transitions throughout the page.
+
+- As a user I would like a menu to be optimised for mobile such as a hamburger menu.
 
 ## Wireframe:
 
@@ -39,6 +52,8 @@ A list of any libraries, frameworks, or packages that your application requires 
 Express.js, pg, cors...
 
 ## Lighthouse report:
+
+![light house report](https://cdn.discordapp.com/attachments/1252188217554374746/1253363127001677925/Screenshot_2024-06-20_at_15.57.28.png?ex=667594df&is=6674435f&hm=aef038ea9b0aa90238a1acbaac6be59905c7fced6d1ddd608510ab01330fbfd6&)
 
 # Reflections:
 
