@@ -211,6 +211,7 @@ function createGameArray() {
   return game;
 }
 const games = createGameArray();
+console.log(games);
 
 let gameDataDisplay = document.getElementById("game-text");
 let tempTab = 4;
@@ -251,16 +252,3 @@ games.forEach((thisGame, index) => {
 //   // if back thake next index as thisindex -1
 
 // };
-
-document.querySelector("#forBtn").addEventListener("click", () => {
-  let thisIndex = document.activeElement.imgIndex;
-  let nextIndex = thisIndex + 1;
-  console.log(document.activeElement.imgIndex);
-  console.log("Been lciked");
-  games[nextIndex].focus;
-  thisIndex = document.activeElement.imgIndex;
-  console.log(thisIndex);
-});
-document
-  .querySelector("#backBtn")
-  .addEventListener("click", () => navigate("backward"));
