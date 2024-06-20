@@ -26,6 +26,44 @@ async function fetchAndRenderGameForm() {
 }
 fetchAndRenderGameForm();
 
+//filter for most recent (default)
+
+const mostRecentFilter = document.querySelector("#most-recent-filter");
+
+mostRecentFilter.addEventListener("click", fetchAndRenderGameForm);
+
+// adding a filter by rating button
+
+const filterRating = document.querySelector("#rating-filter");
+
+let URL =
+  "http://localhost:7430/sortbyrating" ??
+  "https://team-project-0ss1.onrender.com/sortbyrating";
+
+async function sortByRating() {
+  const response = await fetch(URL);
+  const userReviews = await response.json();
+  console.log(userReviews);
+  const reviewDiv = document.getElementById("review-info-container");
+  reviewDiv.innerHTML = "";
+
+  userReviews.forEach((msg) => {
+    const userReviewsDiv = document.createElement("div");
+    userReviewsDiv.id = "inputReviews";
+    userReviewsDiv.innerHTML = `<div id="review-info"><p id="username"> ${msg.username}</p> <p id="game-name-title">${msg.game_name}</p> <div class="rating-div"><p id="rating">${msg.rating}</p></div></div><div id="comment-box-container><p id="comment-box">${msg.review} </p></div>`;
+    reviewDiv.appendChild(userReviewsDiv);
+  });
+  function updateScroll() {
+    let element = document.getElementById("review-info-container");
+    element.scrollTop = -element.scrollHeight;
+  }
+  updateScroll();
+}
+
+filterRating.addEventListener("click", sortByRating);
+
+// form submission
+
 form.addEventListener("submit", submitButton);
 async function submitButton(event) {
   event.preventDefault();

@@ -44,3 +44,13 @@ app.post("/reviews", async (request, response) => {
     response.status(500).json({ success: false });
   }
 });
+
+// adding a filter button
+app.get("/sortbyrating", async (req, res) => {
+  const result = await db.query(`
+        SELECT * FROM reviews
+        ORDER BY rating
+        `);
+  console.log(result);
+  res.json(result.rows);
+});
