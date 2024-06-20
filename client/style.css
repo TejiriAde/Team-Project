@@ -115,6 +115,45 @@ p {
   color: orangered;
 }
 
+.gallery-buttons {
+  background-color: transparent;
+  color: teal;
+  font-weight: bolder;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  border: solid 2px teal;
+  font-size: 20px;
+  margin: 5px;
+  justify-items: center;
+  align-items: center;
+  height: 40px;
+  width: 60px;
+}
+
+.gallery-buttons:hover {
+  background-color: teal;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border: solid 2px teal;
+  font-size: 20px;
+  margin: 5px;
+  justify-items: center;
+  align-items: center;
+  height: 40px;
+  width: 60px;
+}
+
+#buttons-div {
+  display: flex;
+  flex-direction: row;
+}
+
 /* game summary styling 
 
 .game-summary-body-text {
