@@ -182,7 +182,7 @@ function createGameArray() {
   const jenga = document.getElementById("jenga");
   jenga.name = "Jenga";
   jenga.summary =
-    "Steady hands and a sense of confindience are required in this skill based game where players take it in turns to remove blocks from the towr one by one before placing them on top. Whoever causes it to fall can consider themselves the loser";
+    "Steady hands and a sense of confidence are required in this skill based game where players take it in turns to remove blocks from the towr one by one before placing them on top. Whoever causes it to fall can consider themselves the loser";
   jenga.noOfPlayers = "2+";
   jenga.noOfPlayersAria = "2 or more";
   jenga.playTime = "30 seconds - 10 minutes";
@@ -215,12 +215,20 @@ function createGameArray() {
 const games = createGameArray();
 
 let gameDataDisplay = document.getElementById("game-text");
-
+let tempTab = 4;
 games.forEach((thisGame, index) => {
+  thisGame.tabIndex = tempTab;
+  tempTab = tempTab + 1;
+  thisGame.imgIndex = index;
+  // addEventListener("focus", (event) => {
+  //   thisGame.style.outline = "1px solid orange";
+  // });
+
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
     gameDataDisplay.innerHTML = "";
     gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><p> Description: ${thisGame.summary}`;
+    gameDataDisplay.tabIndex = 14;
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
 });
