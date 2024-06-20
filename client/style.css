@@ -112,7 +112,7 @@ p {
 
 /* game summary styling  */
 
-#game-summary-body-text {
+.game-summary-body-text {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -414,7 +414,7 @@ li {
     flex-basis: 100ch;
     font-size: 18px;
   }
-  #game-summary-body-text {
+  .game-summary-body-text {
     flex-direction: column;
   }
   .game-summary-contents {

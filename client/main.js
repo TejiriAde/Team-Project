@@ -225,7 +225,7 @@ games.forEach((thisGame, index) => {
   thisGame.addEventListener("click", () => {
     currentGame = thisGame.name;
     gameDataDisplay.innerHTML = "";
-    gameDataDisplay.innerHTML = `<p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p><p> Description: ${thisGame.summary}`;
+    gameDataDisplay.innerHTML = `<div class="game-summary-contents" ><p> Description: ${thisGame.summary}</div><div class="game-summary-contents" ><p>No. of Players: ${thisGame.noOfPlayers}</p><p>Play time: ${thisGame.playTime} </p></div>`;
     gameDataDisplay.tabIndex = 14;
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
