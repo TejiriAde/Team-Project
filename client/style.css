@@ -110,6 +110,15 @@ p {
   color: orangered;
 }
 
+/* #backBtn {
+  position: absolute;
+  left: 20 px;
+  top: 200 px;
+}
+
+#forBtn {
+ 
+} */
 /* game summary styling  */
 
 .game-summary-body-text {
