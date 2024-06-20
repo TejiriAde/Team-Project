@@ -232,3 +232,27 @@ games.forEach((thisGame, index) => {
     gameDataDisplay.ariaLabel = `${thisGame.name} a game for ${thisGame.noOfPlayersAria} players. With a play time of ${thisGame.playTimeAria}. ${thisGame.summary}.`;
   });
 });
+
+//BUTTONS
+
+const navigate = (direction) => {
+  let currentIndex = 0;
+  games.forEach((game, index) => {
+    if (game.src === games.src) {
+      currentIndex = index;
+    }
+  });
+
+  const newIndex =
+    direction === "forward"
+      ? (currentIndex + 1) % games.length
+      : (currentIndex - 1 + games.length) % games.length;
+  games.src = games[newIndex].src;
+};
+
+document
+  .querySelector("#forBtn")
+  .addEventListener("click", () => navigate("forward"));
+document
+  .querySelector("#backBtn")
+  .addEventListener("click", () => navigate("backward"));
