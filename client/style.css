@@ -58,7 +58,10 @@ p {
 }
 
 /* game section styling  */
-
+#top-header {
+  display: flex;
+  justify-content: space-between;
+}
 #games {
   display: flex;
   flex-direction: column;
@@ -111,7 +114,18 @@ p {
   color: orangered;
 }
 
-/* game summary styling  */
+#backBtn {
+  background-color: transparent;
+  color: turquoise;
+}
+
+#forBtn {
+  background-color: transparent;
+  color: teal;
+  font-weight: bolder;
+}
+*/
+/* game summary styling 
 
 .game-summary-body-text {
   display: flex;
