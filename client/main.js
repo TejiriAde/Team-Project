@@ -211,6 +211,7 @@ function createGameArray() {
   return game;
 }
 const games = createGameArray();
+console.log(games);
 
 let gameDataDisplay = document.getElementById("game-text");
 let tempTab = 4;
@@ -240,27 +241,6 @@ games.forEach((thisGame, index) => {
 
   thisGame.tabIndex = tempTab + index;
 });
-
-//BUTTONS
-
-// const navigate = (direction) => {
-//   let currentIndex = 0;
-//   games.forEach((game, index) => {
-//     if (game.src === games.src) {
-//       currentIndex = index;
-//     }
-//   });
-
-//   const newIndex =
-//     direction === "forward"
-//       ? (currentIndex + 1) % games.length
-//       : (currentIndex - 1 + games.length) % games.length;
-//   games.src = games[newIndex].src;
-//   //  thisIndex
-//   //  if forward take next index as thisINdex + 1
-//   // if back thake next index as thisindex -1
-
-// };
 
 let forwardButton = document.querySelector("#forBtn");
 const galleryViewer = document.getElementById("game-gallery-container");
