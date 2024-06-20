@@ -233,24 +233,34 @@ games.forEach((thisGame, index) => {
 
 //BUTTONS
 
-const navigate = (direction) => {
-  let currentIndex = 0;
-  games.forEach((game, index) => {
-    if (game.src === games.src) {
-      currentIndex = index;
-    }
-  });
+// const navigate = (direction) => {
+//   let currentIndex = 0;
+//   games.forEach((game, index) => {
+//     if (game.src === games.src) {
+//       currentIndex = index;
+//     }
+//   });
 
-  const newIndex =
-    direction === "forward"
-      ? (currentIndex + 1) % games.length
-      : (currentIndex - 1 + games.length) % games.length;
-  games.src = games[newIndex].src;
-};
+//   const newIndex =
+//     direction === "forward"
+//       ? (currentIndex + 1) % games.length
+//       : (currentIndex - 1 + games.length) % games.length;
+//   games.src = games[newIndex].src;
+//   //  thisIndex
+//   //  if forward take next index as thisINdex + 1
+//   // if back thake next index as thisindex -1
 
-document
-  .querySelector("#forBtn")
-  .addEventListener("click", () => navigate("forward"));
+// };
+
+document.querySelector("#forBtn").addEventListener("click", () => {
+  let thisIndex = document.activeElement.imgIndex;
+  let nextIndex = thisIndex + 1;
+  console.log(document.activeElement.imgIndex);
+  console.log("Been lciked");
+  games[nextIndex].focus;
+  thisIndex = document.activeElement.imgIndex;
+  console.log(thisIndex);
+});
 document
   .querySelector("#backBtn")
   .addEventListener("click", () => navigate("backward"));
