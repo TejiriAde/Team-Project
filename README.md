@@ -14,11 +14,24 @@ A site which both allows you to create a virtual pantry of all the food items in
 
 ## Problem domain:
 
-People can't always remember what food items they have in their houses, and coming up with recipe ideas isn't always easy.
+It’s hard to know what game to choose, I would like a place to go and find a game that is peer reviewed.
 
 ## User stories:
 
-As a user, I want to see a list of the items I have in my pantry.
+As a user…
+
+As a user I want to be able to see a selection of games and their ratings.
+
+As a user I want to be able to filter these games by highest/lowest rated.
+
+As a user I want to be able to see the release date of the games.
+
+Stretch goals
+As a user I want to be able to see a highlight carousel of new games.
+
+As a user I want to be able to filter the games by genre.
+
+As a user I want to be able to able to vote on a game.
 
 ## Wireframe:
 
