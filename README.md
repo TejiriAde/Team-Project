@@ -50,6 +50,10 @@ As a user…
 
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
 Express.js, pg, cors...
+Low Fidelity Wireframes
+Wireframe for Desktop: ![Desktop Wireframe](https://cdn.discordapp.com/attachments/1252188217554374746/1252247217343823923/Screenshot_2024-06-17_at_14.02.40.png?ex=667622da&is=6674d15a&hm=608f53301c6032be16a3bf13bec82874c22efb40f598a2aaf73feec0372789ed&)
+
+Wireframe for Mobile: ![Mobile Wireframe](https://cdn.discordapp.com/attachments/1252188217554374746/1252247217637687316/Screenshot_2024-06-17_at_14.02.57.png?ex=667622da&is=6674d15a&hm=af8ce31a554974dc5f9159940e2a1f6f3e1cca6d7840eda2c327df6a49ec6fab&)
 
 ## Lighthouse report:
 
